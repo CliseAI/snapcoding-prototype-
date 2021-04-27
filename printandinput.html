@@ -13,7 +13,22 @@ and open the template in the editor.
         <link rel="stylesheet" href="snapcoding.css">                                    <!-- My css         -->
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>       <!-- icon pack      -->
     </head>    
-    <body>      
+    <body>   
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="prototype.html" style="color: #363e71;">SnapCoding</a>
+                </div>      
+                <div class="menu">
+                    <ul class="navbar-menu">   
+                        <li class="li-menu"><a href="Prototype.html" class="link-menu" style="color:#363e71;">Home</a></li>
+                        <li class="li-menu"><a href="Forum.html" class="link-menu" style="color:#363e71;">Forum</a></li>                            
+                        <li class="li-menu"><a href="Course.html" class="link-menu" style="color:#363e71;">Course</a></li>
+                        <li class="li-menu"><a href="About.html" class="link-menu" style="color:#363e71;">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
             <div class="main static">               
                 <div class="course-page">
                     <div class="tittle">
@@ -25,8 +40,9 @@ and open the template in the editor.
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/piLI3Zk_RmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <p>Python provides numerous built-in functions that are readily available to us at the Python prompt. 
                             Some of the functions like <font class="code-text">input()</font> and <font class="code-text">print()</font> are widely used for standard input and output operations respectively. 
-                           Let us see the output section first.</p><br>
-                        <h3>Python Output Using print() function</h3>
+                           Let us see the output section first.</p>
+                        <br><hr><br>
+                        <h2>Python Output Using print() function</h2>
                         <p>We use the <font class="code-text">print()</font> 
                            function to output data to the standard output device (screen). 
                            We can also output data to a file, but this will be discussed later. 
@@ -38,6 +54,90 @@ and open the template in the editor.
                         <p class="code-example">a = 5 <br>print('The value of a is', a)</p>
                         <h3>Output</h3>
                         <p class="code-example">The value of a is 5</p>
+                        <p>In the second <font class="code-text">print()</font> statement, we can notice that space was 
+                            added between the string and the value of variable <font class="code-text">a</font>. This is by default, 
+                            but we can change it.The actual syntax of the <font class="code-text">print()</font> function is:</p>
+                        <p class="code-example">print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)</p>
+                        <p>Here, <font class="code-text">objects</font> is the value(s) to be printed. The <font class="code-text">sep</font> separator is used between the values. 
+                            It defaults into a space character. After all values are printed, <font class="code-text">end</font> is printed. It defaults into a new line. 
+                            The <font class="code-text">file</font> is the object where the values are printed and its default value is <font class="code-text">sys.stdout</font> (screen). 
+                            Here is an example to illustrate this.</p>
+                        <p class ="code-example">
+                            print(1, 2, 3, 4)<br>
+                            print(1, 2, 3, 4, sep='*')<br>
+                            print(1, 2, 3, 4, sep='#', end='&')
+                        </p>
+                        <h3>Output</h3>
+                        <p class="code-example">
+                            1 2 3 4<br>
+                            1*2*3*4<br>
+                            1#2#3#4&
+                        </p>
+                        <br><hr><br>
+                        <h2>Output formatting</h2>
+                        <p>Sometimes we would like to format our output to make it look attractive. 
+                            This can be done by using the <font class="code-text">str.format()</font> method. 
+                            This method is visible to any string object.</p>
+                        <p class="code-example">
+                            >>> x = 5; y = 10<br>
+                            >>> print('The value of x is {} and y is {}'.format(x,y))<br>
+                            The value of x is 5 and y is 10
+                        </p>
+                        <p>Here, the curly braces <font class="code-text">{}</font> are 
+                            used as placeholders. We can specify the order 
+                            in which they are printed by using numbers (tuple index).</p>
+                        <p class="code-example">
+                            print('I love {0} and {1}'.format('bread','butter'))<br>
+                            print('I love {1} and {0}'.format('bread','butter'))
+                        </p>
+                        <h3>Output</h3>
+                        <p class="code-example">
+                            I love bread and butter<br>
+                            I love butter and bread
+                        </p>
+                        <p>We can even use keyword arguments to format the string.</p>
+                        <p class="code-example">
+                            >>> print('Hello {name}, {greeting}'.format(greeting = 'Goodmorning', name = 'John'))<br>
+                            Hello John, Goodmorning
+                        </p>
+                        <p>We can also format strings like the old <font class="code-text">sprintf()</font>
+                            style used in C programming language. We use the <font class="code-text">%</font> operator to accomplish this.</p>
+                        <p class="code-example">
+                            >>> x = 12.3456789<br>
+                            >>> print('The value of x is %3.2f' %x)<br>
+                            The value of x is 12.35<br>
+                            >>> print('The value of x is %3.4f' %x)<br>
+                            The value of x is 12.3457</p>
+                        <br><hr><br>
+                        <h2>Python Input</h2>
+                        <p>Up until now, our programs were static. The value of variables was defined or hard coded into the source code. 
+                           To allow flexibility, we might want to take the input from the user. In Python, 
+                           we have the <font class="code-text">input()</font> function to allow this. The syntax for <font class="code-text">input()</font> is:</p>
+                        <p class="code-example">input([prompt])</p>
+                        <p>where <font class="code-text">prompt</font> is the string we wish to display on the screen. It is optional.</p>
+                        <p class="code-example">
+                            >>> num = input('Enter a number: ')<br>
+                            Enter a number: 10<br>
+                            >>> num<br>
+                            '10'</p>
+                        <p>Here, we can see that the entered value <font class="code-text">10</font> is a string, not a number. 
+                            To convert this into a number we can use <font class="code-text">int()</font> or <font class="code-text">float()</font> functions.</p>
+                        <p class="code-example">
+                            >>> int('10')<br>
+                            10<br>
+                            >>> float('10')<br>
+                            10.0</p>
+                        <p>This same operation can be performed using the <font class="code-text">eval()</font> function. But <font class="code-text">eval</font> takes it further. 
+                            It can evaluate even expressions, provided the input is a string</p>
+                        <p class="code-example">
+                            >>> int('2+3')<br>
+                            Traceback (most recent call last):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;File "&lt;string&gt;", line 301, in runcode<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;File "&lt;interactive input&gt;", line 1, in &lt;module&gt;<br>
+                            ValueError: invalid literal for int() with base 10: '2+3'<br>
+                            >>> eval('2+3')
+                            5</p>
+                        <br><hr><br>
                     </div>
                 </div>
                 <div class="section get-started">
