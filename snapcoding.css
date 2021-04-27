@@ -462,7 +462,7 @@ input[type=text], input[type=password] {
     text-align: center;
 }
 .tittle h1{
-    margin: 0;
+    margin: 100px 0px 0px 0px;
 }
 .course-pagematerial{
     font-family: calibri;
@@ -478,7 +478,7 @@ input[type=text], input[type=password] {
 }
 .code-text{
     font-family: "Abril Fatface", Times, serif; 
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     border: solid #d4d4d4 0.3px;
     padding: 2px 5px 2px 5px;
     border-radius: 8px;
@@ -486,7 +486,6 @@ input[type=text], input[type=password] {
 }
 .code-example{
     font-family: "Abril Fatface", Times, serif; 
-    letter-spacing: 3px;
     border: solid #d4d4d4 0.3px;
     padding: 20px;
     border-radius: 8px;
