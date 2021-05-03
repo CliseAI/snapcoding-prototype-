@@ -22,9 +22,9 @@ body{
     display: flex;
 }
 .bgAbout {
-    background-image: url('image/pyth.jpeg');
+    background-color: #363e71;
     background-size: cover;
-    height: 100vh;
+    height: 150px;
     justify-content: center;
     align-content: center;
     display: flex;
