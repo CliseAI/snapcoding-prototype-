@@ -402,7 +402,17 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
+.containerSnap {
+  display: block;
+  padding: 25px 50px 25px 50px;
+  align-content: center;
+  border-radius: 0px 0px 10px 10px;
+}
+.containerSnap .span{
+    display: inline;
+    padding-right: 0px;
+    margin-left: 49%;   
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
