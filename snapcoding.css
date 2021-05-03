@@ -451,14 +451,14 @@ input[type=text], input[type=password] {
 
 /* Course page */
 
-.tittle {
+.title {
     font-family: calibri;
     font-size: 40px;
     color: #363e71;
     padding: 100px 30px 30px 30px;
     text-align: center;
 }
-.tittle h1{
+.title h1{
     margin: 100px 0px 0px 0px;
 }
 .course-pagematerial{
@@ -487,4 +487,28 @@ input[type=text], input[type=password] {
     padding: 20px;
     border-radius: 8px;
     background-color: #f3f3f3;
+}
+
+/* About Page */
+
+.titleAbout {
+    font-family: calibri;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.titleAbout h1{
+    margin: 0;
+}
+.aboutSnap{
+    font-family: calibri;
+    text-align: left;
+    color: #223061;
+}
+.aboutSnap li{
+    list-style-type: none;
+}
+.aboutSnap li p{
+    font-size: 20px;
+    font-weight: 400;
 }
