@@ -22,13 +22,12 @@ body{
     display: flex;
 }
 .bgAbout {
-    background-color: url('image/aboutBG.png');
+    background-color: #363e71;
     background-size: cover;
-    height: 100vh;
+    height: 150px;
     justify-content: center;
     align-content: center;
     display: flex;
-    text-align: center;
 }
 .bgCourse {
     background-image: url('image/courseBG.png');
