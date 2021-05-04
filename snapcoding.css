@@ -22,12 +22,13 @@ body{
     display: flex;
 }
 .bgAbout {
-    background-color: #363e71;
+    background-image: url('image/aboutBG.png');
     background-size: cover;
-    height: 150px;
+    height: 100vh;
     justify-content: center;
     align-content: center;
     display: flex;
+    padding: 0px 39% 0px 40%;
 }
 .bgCourse {
     background-image: url('image/courseBG.png');
@@ -454,6 +455,10 @@ input[type=text], input[type=password] {
     border-radius: 5px;
     font-size: 15px;
     padding: 10px;
+}
+.motto1{
+    text-align: center;
+    display: block;
 }
 
 
