@@ -28,6 +28,7 @@ body{
     justify-content: center;
     align-content: center;
     display: flex;
+    text-align: center;
 }
 .bgCourse {
     background-image: url('image/courseBG.png');
